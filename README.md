@@ -114,7 +114,7 @@ Training HTR versions using varied data:
 | V1_test | Morchesne, Clairmarais, Livre Rouge, 108a |arch_1 | 92.50% | 69.75% |32.68% |88.79% |[log_1](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V1_evaluation) |
 | V2_test | V1 core, +LL115 (20 pages), +1º e-ndp group |arch_1 | 93.47% | 83.57% |18.52% | 68.21% |[log_2](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V2_evaluation) |
 | V3_test | V1 core, V2 core, +2º e-ndp group |arch_1 |94.43% |86.92% |14.46% |58.94% | [log_3](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3_evaluation) |
-| V3b_test | Only e-ndp transcriptions (193 images) |arch_1| 93.19% |81.52% |19.72% |73.81% |[log_4](hhttps://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3b_evaluation) |
+| V3b_test | Only e-ndp transcriptions (193 images) |arch_1| 93.19% |81.90% |19.72% |73.81% |[log_4](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3b_evaluation) |
 ||[all G1 test metrics](https://magistermilitum.gitlab.io/e-ndp_htr/)|
 
 
