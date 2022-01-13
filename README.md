@@ -2,92 +2,94 @@
 
 
 
-## Getting started
+HOME-ALCAR training experiments to fit aligned cartularies from HOME-ALCAR database into Kraken HTR core.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+# Definitions
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Detected script types for each cartulary
 
-## Add your files
 
-- [ ] [Create](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+|      Volume     |    Dates   |  Type | N.Pages |
+|:---------------:|:----------:|:-----:|:-------:|
+|       105       | 1326-1352. |       |         |
+|       106A      | 1356-1361. |       |         |
+|       106B      | 1362-1364. | Train |    8    |
+|       107       | 1367-1370. |       |         |
+|       108A      | 1392-1394. | Train |    27   |
+|       108B      | 1397-1399. | Train |    8    |
+|       109A      | 1399-1401. |  Test |    4    |
+|       109B      | 1401-1405. | Train |    7    |
+|       109C      | 1405-1407. | Train |    8    |
+|       110       | 1407-1411. | Train |    7    |
+|       111       | 1412-1414. |  Test |    3    |
+|       112       | 1414-1424. | Train |    7    |
+|       113       | 1425-1432. | Train |    10   |
+|       114       |  1433-1437 | Train |    8    |
+|       115       | 1440-1444. |  Test |    4    |
+|       116       | 1445-1459. |  Test |    4    |
+|       117       | 1450-1454. | Train |    60   |
+|  118 (minutes)  | 1453-1456. |       |         |
+|       119       | 1456-1460. |       |         |
+|       120       | 1460-1465. |       |         |
+|       121       | 1465-1474. |  Test |    3    |
+|       122       | 1474-1481. | Train |    7    |
+|     123-124     | 1481-1489. |  Test |    4    |
+|       125       |  1489-1493 | Train |   20+8  |
+|       126       |  1493-1497 | Train |    8    |
+| Bnf Latin 17740 |  1430-1444 |  Test |   687   |
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/magistermilitum/e-ndp_htr.git
-git branch -M main
-git push -uf origin main
-```
+references:
+[Kestemont, M., Christlein, V., & Stutzmann, D. (2017). Artificial Paleography: Computational Approaches to Identifying Script Types in Medieval Manuscripts. Speculum, 92(S1), S86-S109.](https://hal.archives-ouvertes.fr/hal-01854939/document)
 
-## Integrate with your tools
+# Architecture
 
-- [ ] [Set up project integrations](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://gitlab.com/magistermilitum/e-ndp_htr/-/settings/integrations)
+### Architecure 1: 
 
-## Collaborate with your team
 
-- [ ] [Invite team members and collaborators](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+![alt text for screen readers](https://gitlab.com/magistermilitum/home_alcar_kraken/-/raw/main/images/kraken_arch_1.drawio.png)
 
-## Test and Deploy
+hyper_params': {'pad': 16, 'freq': 1.0, 'batch_size': 1, 'lag': 5, 'min_delta': None, 'optimizer': 'Adam', 'lrate': 0.0001, 'momentum': 0.9, 'weight_decay': 0, 'schedule': 'reduceonplateau', 'normalization': None, 'normalize_whitespace': True, 'augment': False, 'step_size': 10, 'gamma': 0.1, 'rop_patience': 3, 'cos_t_max': 50}}
 
-Use the built-in continuous integration in GitLab.
+### Architecure 2:
 
-- [ ] [Get started with GitLab CI/CD](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://gitlab.com/-/experiment/new_project_readme_content:60f3bf9241bfd3a61f4a221426ccdf69?https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+# Training
 
-***
 
-# Editing this README
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com) for this template.
+training board accuracy on validation set
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+<p float="left">
+<img src="https://gitlab.com/magistermilitum/home_alcar_kraken/-/raw/main/images/val_acc_G1.jpg" width="546" height="400"> <img src="https://gitlab.com/magistermilitum/home_alcar_kraken/-/raw/main/images/val_acc_G2.jpg" width="546" height="400">
+</p>
 
-## Name
-Choose a self-explaining name for your project.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+# Experiments
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Testing Group 1 (Cursiva) against Nesle cartulary unseen during training (124 images, 228591 characters)
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Testing Group 2 (Textualis) against Chartres_2 cartulary unseen during training (144 images, 271398 characters)
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+- **val_acc** = accuracy on validation set during training
+- **test_acc** = accuracy on corpus test (Nesle or Chartres_2) after training
+- **cer** = test character error rate
+- **wer** = test word error rate
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+| model_name | Content | arch |val_acc | test_acc |cer | wer | logs |
+| ------ | ------ |------ |------ |------ |------ |------ |------ |
+| group1_test_1 | Navarre, ND_Roche, Clairmarais |arch_1 | 92.50% | 75.99% |22.68% |58.79% |[log_1](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G1_test_1_evaluation) |
+| group1_test_2 | Navarre, ND_Roche, Clairmarais, +Morchesne, |arch_1 | 93.47% | 76.33% |22.52% | 58.21% |[log_2](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G1_test_2_evaluation) |
+| group1_test_3 | Navarre, ND_Roche, Clairmarais, Sommereux |arch_1 |93.43% |77.32% |20.46% |54.34% | [log_3](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G1_test_3_evaluation) |
+| group1_test_4 | Navarre, ND_Roche, Clairmarais, +Morchesne, Sommereux, +10 pages Nesle (fine-tuning) |arch_1| 93.19% |86.74% |12.92% |37.01% |[log_4](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G1_test_4_evaluation) |
+| group1_test_5 | Navarre, ND_Roche, Clairmarais, +Morchesne, + e-NDP | arch_1 |94.22%| 82.24% |17.38% |48.61% |[log_5](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G1_test_5_evaluation) |
+||[all G1 test metrics](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G1_all_tests_metrics.txt)|
+| group2_test_1 | S_Denis, Fervaques, S_Nicaise, Port_Royal 1-2 |arch_1| 91.90% |87.39% |10.81% |29.20%  |[log_6](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G2_test_2b_evaluation) |
+| group2_test_2 | S_Denis, Fervaques, S_Nicaise, Port_Royal 1-2, Vauluisant  |arch_1| 90.90% |88.17% |10.04% |26.63%  |[log_7](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G2_test_1b_evaluation) |
+| group2_test_3 | S_Denis, Fervaques, S_Nicaise, Port_Royal 1-2, Vauluisant, Molesme_1  |arch_1| 92.76% |88.66% |9.64% |25.20%  |[log_8](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G2_test_3b_evaluation) |
+| group2_test_3 | S_Denis, Fervaques, S_Nicaise, Port_Royal 1-2, Vauluisant, +10 pages Chartres_2 (fine-tuning)  |arch_1| 90.80% |89.20% |9.33% |24.83%  |[log_9] |
+||[all G2 test metrics](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G2_all_test_metrics.txt)|
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
 
