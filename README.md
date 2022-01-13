@@ -78,14 +78,15 @@ training board accuracy on validation set
 - cart. ND de Clairmarais :  134 images (268 pages) : https://bvmm.irht.cnrs.fr/mirador/index.php?manifest=https://bvmm.irht.cnrs.fr/iiif/32117/manifest  /  https://doi.org/10.5281/zenodo.5600884
 - Livre Rouge ( Châtelet de Paris. Y//3 ) :  34 images : https://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_056373/c-2xp1c58jd-1w19uv1g8sus6  /  https://gitlab.huma-num.fr/lamop/htr/-/tree/master/Livre_Rouge_Y__3
 - e-NDP: LL 108a (27 images) + LL 125 (20) : https://e-ndp-beta.lamop.fr/public/E-NdP/temp/JPEG/
+         
          + 1º group : volumes LL 106b-126 (64 images)
          + 2º group : volumes LL 106b-126 (82 images) 
          = 193 images (TRAIN)
 
          + 22 images (TEST) : LL 109A, 111, 115, 116, 121, 123-124
-         + Bnf Latin 1770 (687): 
+         + Bnf Latin 1770 (687 images): https://gallica.bnf.fr/ark:/12148/btv1b525092040
 
-- Total : 
+Total : 
 - TRAIN: 550 images --> 450 folios -> 900 pages
 - TEST: 22 images --> 22 pages
 
@@ -107,8 +108,8 @@ Training HTR versions using varied data:
 - 11/01/2022: V3 core --> V1 core + V2 core + 82 pages (2º e-ndp transcription group)
 
 
-- **val_acc** = accuracy on validation set during training
-- **test_acc** = accuracy on corpus test after training
+- **val_acc** = accuracy on validation set _during_ training
+- **test_acc** = accuracy on corpus test _after_ training
 - **cer** = test character error rate
 - **wer** = test word error rate
 
