@@ -85,7 +85,7 @@ Testing Group 2 (Textualis) against Chartres_2 cartulary unseen during training 
 | group1_test_3 | Navarre, ND_Roche, Clairmarais, Sommereux |arch_1 |93.43% |77.32% |20.46% |54.34% | [log_3](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G1_test_3_evaluation) |
 | group1_test_4 | Navarre, ND_Roche, Clairmarais, +Morchesne, Sommereux, +10 pages Nesle (fine-tuning) |arch_1| 93.19% |86.74% |12.92% |37.01% |[log_4](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G1_test_4_evaluation) |
 | group1_test_5 | Navarre, ND_Roche, Clairmarais, +Morchesne, + e-NDP | arch_1 |94.22%| 82.24% |17.38% |48.61% |[log_5](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G1_test_5_evaluation) |
-||[all G1 test metrics](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G1_all_tests_metrics.txt)|
+||[all G1 test metrics](https://magistermilitum.gitlab.io/e-ndp_htr/)|
 | group2_test_1 | S_Denis, Fervaques, S_Nicaise, Port_Royal 1-2 |arch_1| 91.90% |87.39% |10.81% |29.20%  |[log_6](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G2_test_2b_evaluation) |
 | group2_test_2 | S_Denis, Fervaques, S_Nicaise, Port_Royal 1-2, Vauluisant  |arch_1| 90.90% |88.17% |10.04% |26.63%  |[log_7](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G2_test_1b_evaluation) |
 | group2_test_3 | S_Denis, Fervaques, S_Nicaise, Port_Royal 1-2, Vauluisant, Molesme_1  |arch_1| 92.76% |88.66% |9.64% |25.20%  |[log_8](https://gitlab.com/magistermilitum/home_alcar_kraken/-/blob/main/logs/G2_test_3b_evaluation) |
