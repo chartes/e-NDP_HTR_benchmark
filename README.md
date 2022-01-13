@@ -40,7 +40,8 @@ Detected script types for each cartulary
 | Bnf Latin 17740 |  1430-1444 |  Test |   687   |
 
 references:
-[Kestemont, M., Christlein, V., & Stutzmann, D. (2017). Artificial Paleography: Computational Approaches to Identifying Script Types in Medieval Manuscripts. Speculum, 92(S1), S86-S109.](https://hal.archives-ouvertes.fr/hal-01854939/document)
+[Projet e-NDP – Notre-Dame de Paris et son cloître : archives des séances du séminaire](https://lamop.hypotheses.org/files/2020/11/e-NDP_seance1_20201020-compresse-1.pdf)
+[SÉRIE LL MONUMENTS ECCLÉSIASTIQUES REGISTRES](http://www.archivesnationales.culture.gouv.fr/chan/chan/fonds/EGF/SA/InvSAPDF/Ll.pdf)
 
 # Architecture
 
@@ -83,14 +84,14 @@ training board accuracy on validation set
          + Bnf Latin 1770 (687): 
 
 - Total : 
-- TRAIN: 550 images -> 450 folios -> 900 pages
-- TEST: 22 images -> 22 pages
+- TRAIN: 550 images --> 450 folios -> 900 pages
+- TEST: 22 images --> 22 pages
 
 ## Multilingual 
 
 - Odart de Morchesne : 274 actes --> 94 lat + 180 fro (35%-40% lat)
 - Clairmarais : 178 actes ---> 176 lat + 2 fro (99% lat)
-- Livre Rouge (35%-40% latin)
+- Livre Rouge (35% - 40% latin)
 - e-ndp (almost all in latin)
 - Total: ± 72% latin / 28% français
 
@@ -99,13 +100,13 @@ training board accuracy on validation set
 
 Training HTR versions using varied data:
 
-- 19/10/2021: V1 core -> Formulaire Odart de Morchesne + Cartulaire de Clairmarais + Livre Rouge + LL 108a (e-dnp_V1) : 
-- 16/11/2021: V2 core -> V1 core + 84 pages (1º e-ndp transcription group)
-- 11/01/2022: V3 core -> V1 core + V2 core + 82 pages (2º e-ndp transcription group)
+- 19/10/2021: V1 core --> Formulaire Odart de Morchesne + Cartulaire de Clairmarais + Livre Rouge + LL 108a (e-dnp_V1) : 
+- 16/11/2021: V2 core --> V1 core + 84 pages (1º e-ndp transcription group)
+- 11/01/2022: V3 core --> V1 core + V2 core + 82 pages (2º e-ndp transcription group)
 
 
 - **val_acc** = accuracy on validation set during training
-- **test_acc** = accuracy on corpus test (Nesle or Chartres_2) after training
+- **test_acc** = accuracy on corpus test after training
 - **cer** = test character error rate
 - **wer** = test word error rate
 
