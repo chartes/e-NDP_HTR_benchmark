@@ -7,7 +7,7 @@ e-NDP_HTR training experiments to fit transcribed pages from AN, LL105-126 regis
 
 # Definitions
 
-Detected script types for each cartulary
+Stats for each register volume (LL105 - LL126, 26 volumes)
 
 
 |      Volume     |    Dates   |  Type | N.Pages |
@@ -41,6 +41,8 @@ Detected script types for each cartulary
 
 references:
 [Projet e-NDP – Notre-Dame de Paris et son cloître : archives des séances du séminaire](https://lamop.hypotheses.org/files/2020/11/e-NDP_seance1_20201020-compresse-1.pdf)
+
+
 [SÉRIE LL MONUMENTS ECCLÉSIASTIQUES REGISTRES](http://www.archivesnationales.culture.gouv.fr/chan/chan/fonds/EGF/SA/InvSAPDF/Ll.pdf)
 
 # Architecture
@@ -93,7 +95,7 @@ training board accuracy on validation set
 - Clairmarais : 178 actes ---> 176 lat + 2 fro (99% lat)
 - Livre Rouge (35% - 40% latin)
 - e-ndp (almost all in latin)
-- Total: ± 72% latin / 28% français
+- Total: ± 72% latin / 28% french
 
 
 ## Model versions
@@ -112,10 +114,10 @@ Training HTR versions using varied data:
 
 | model_name | Content | arch |val_acc | test_acc |cer | wer | logs |
 | ------ | ------ |------ |------ |------ |------ |------ |------ |
-| V1_test | Morchesne, Clairmarais, Livre Rouge, 108a |arch_1 | 92.50% | 69.75% |32.68% |88.79% |[log_1](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V1_evaluation) |
-| V2_test | V1 core, +LL115 (20 pages), +1º e-ndp group |arch_1 | 93.47% | 83.57% |18.52% | 68.21% |[log_2](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V2_evaluation) |
-| V3_test | V1 core, V2 core, +2º e-ndp group |arch_1 |94.43% |86.92% |14.46% |58.94% | [log_3](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3_evaluation) |
-| V3b_test | Only e-ndp transcriptions (193 images) |arch_1| 93.19% |81.90% |19.72% |73.81% |[log_4](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3b_evaluation) |
+| V1_test | Morchesne, Clairmarais, Livre Rouge, 108a |arch_1 | 92.50% | 69.75% |32.68% |92.79% |[log_1](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V1_evaluation) |
+| V2_test | V1 core, +LL115 (20 pages), +1º e-ndp group |arch_1 | 93.47% | 83.57% |18.52% | 58.21% |[log_2](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V2_evaluation) |
+| V3_test | V1 core, V2 core, +2º e-ndp group |arch_1 |94.43% |86.92% |14.46% |42.94% | [log_3](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3_evaluation) |
+| V3b_test | Only e-ndp transcriptions (193 images) |arch_1| 93.19% |81.90% |18.72% |61.81% |[log_4](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3b_evaluation) |
 ||[all G1 test metrics](https://magistermilitum.gitlab.io/e-ndp_htr/)|
 
 
