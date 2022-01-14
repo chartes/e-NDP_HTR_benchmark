@@ -124,7 +124,7 @@ Training HTR versions using varied data:
 | V3b_test | Only e-ndp transcriptions (193 images) |arch_1| 93.19% |81.90% |18.72% |61.81% |[log_4](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3b_evaluation) |
 ||[all G1 test metrics](https://magistermilitum.gitlab.io/e-ndp_htr/)|
 | V3_Latin_17740 | V3 tested on Latin 17740 manuscrit |arch_1| - |89.25% |18.72% |61.81% |[log_5](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_latin_17740_evaluation) |
-| V3b_Latin_17740 | V3b tested on Latin 17740 manuscrit |arch_1| - |82.82% |18.72% |61.81% |[log_6](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_latin_17740_evaluation) |
-| V3_Navarre | V3 tested on Charles II of Navarre manuscrit |arch_1| - |82.59% |18.72% |61.81% |[log_7](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_Navarre_evaluation) |
+| V3b_Latin_17740 | V3b tested on Latin 17740 manuscrit |arch_1| - |82.59% |18.72% |61.81% |[log_6](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_latin_17740_evaluation) |
+| V3_Navarre | V3 tested on Charles II of Navarre manuscrit |arch_1| - |82.82% |18.72% |61.81% |[log_7](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_Navarre_evaluation) |
 | V3b_Navarre | V3b tested on Charles II of Navarre manuscrit |arch_1| - |67.81% |18.72% |61.81% |[log_8](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_Navarre_evaluation) |
 
