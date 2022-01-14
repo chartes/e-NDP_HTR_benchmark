@@ -118,13 +118,13 @@ Training HTR versions using varied data:
 
 | model_name | Content | arch |val_acc | test_acc |cer | wer | logs |
 | ------ | ------ |------ |------ |------ |------ |------ |------ |
-| V1_test | Morchesne, Clairmarais, Livre Rouge, 108a |arch_1 | 92.50% | 69.75% |32.68% |92.79% |[log_1](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V1_evaluation) |
-| V2_test | V1 core, +LL115 (20 pages), +1º e-ndp group |arch_1 | 93.47% | 83.57% |18.52% | 58.21% |[log_2](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V2_evaluation) |
-| V3_test | V1 core, V2 core, +2º e-ndp group |arch_1 |94.43% |86.92% |14.46% |42.94% | [log_3](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3_evaluation) |
-| V3b_test | Only e-ndp transcriptions (193 images) |arch_1| 93.19% |81.90% |18.72% |61.81% |[log_4](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3b_evaluation) |
+| V1_test | Morchesne, Clairmarais, Livre Rouge, 108a |arch_1 | 92.50% | 69.75% |34.88% |71.50% |[log_1](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V1_evaluation) |
+| V2_test | V1 core, +LL115 (20 pages), +1º e-ndp group |arch_1 | 93.47% | 83.57% |18.97% | 48.23% |[log_2](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V2_evaluation) |
+| V3_test | V1 core, V2 core, +2º e-ndp group |arch_1 |94.43% |86.92% |13.25% |36.24% | [log_3](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3_evaluation) |
+| V3b_test | Only e-ndp transcriptions (193 images) |arch_1| 93.19% |81.90% |18.44% |46.94% |[log_4](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3b_evaluation) |
 ||[all G1 test metrics](https://magistermilitum.gitlab.io/e-ndp_htr/)|
-| V3_Latin_17740 | V3 tested on Latin 17740 manuscrit |arch_1| - |89.25% |18.72% |61.81% |[log_5](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_latin_17740_evaluation) |
-| V3b_Latin_17740 | V3b tested on Latin 17740 manuscrit |arch_1| - |82.59% |18.72% |61.81% |[log_6](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_latin_17740_evaluation) |
-| V3_Navarre | V3 tested on Charles II of Navarre manuscrit |arch_1| - |82.82% |18.72% |61.81% |[log_7](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_Navarre_evaluation) |
-| V3b_Navarre | V3b tested on Charles II of Navarre manuscrit |arch_1| - |67.81% |18.72% |61.81% |[log_8](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_Navarre_evaluation) |
+| V3_Latin_17740 | V3 tested on Latin 17740 manuscrit |arch_1| - |89.25% |11.21% |30.28% |[log_5](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_latin_17740_evaluation) |
+| V3b_Latin_17740 | V3b tested on Latin 17740 manuscrit |arch_1| - |82.59% |18.78% |48.17% |[log_6](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_latin_17740_evaluation) |
+| V3_Navarre | V3 tested on Charles II of Navarre manuscrit |arch_1| - |82.82% |14.36% |44.42% |[log_7](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_Navarre_evaluation) |
+| V3b_Navarre | V3b tested on Charles II of Navarre manuscrit |arch_1| - |67.81% |29.02% |69.80% |[log_8](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_Navarre_evaluation) |
 
