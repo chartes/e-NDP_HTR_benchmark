@@ -84,11 +84,14 @@ training board accuracy on validation set
          = 193 images (TRAIN)
 
          + 22 images (TEST) : LL 109A, 111, 115, 116, 121, 123-124
-         + Bnf Latin 1770 (687 images): https://gallica.bnf.fr/ark:/12148/btv1b525092040
 
 Total : 
 - TRAIN: 550 images --> 450 folios -> 900 pages
 - TEST: 22 images --> 22 pages
+
+### External test dataset
+- Bnf Latin 1770 (687 images): https://gallica.bnf.fr/ark:/12148/btv1b525092040
+- Cartulary of Charles II of Navarre (Navarre_Pau_AD_E513, 209 images) : http://earchives.le64.fr/archives-en-ligne/ark:/81221/r13615z7dvnv8k/f1 / https://doi.org/10.5281/zenodo.5600884
 
 ## Multilingual 
 
@@ -120,5 +123,8 @@ Training HTR versions using varied data:
 | V3_test | V1 core, V2 core, +2º e-ndp group |arch_1 |94.43% |86.92% |14.46% |42.94% | [log_3](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3_evaluation) |
 | V3b_test | Only e-ndp transcriptions (193 images) |arch_1| 93.19% |81.90% |18.72% |61.81% |[log_4](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3b_evaluation) |
 ||[all G1 test metrics](https://magistermilitum.gitlab.io/e-ndp_htr/)|
-
+| V3_Latin_17740 | V3 tested on Latin 17740 manuscrit |arch_1| - |89.25% |18.72% |61.81% |[log_5](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_latin_17740_evaluation) |
+| V3b_Latin_17740 | V3b tested on Latin 17740 manuscrit |arch_1| - |82.82% |18.72% |61.81% |[log_6](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_latin_17740_evaluation) |
+| V3_Navarre | V3 tested on Charles II of Navarre manuscrit |arch_1| - |82.59% |18.72% |61.81% |[log_7](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_Navarre_evaluation) |
+| V3b_Navarre | V3b tested on Charles II of Navarre manuscrit |arch_1| - |67.81% |18.72% |61.81% |[log_8](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_Navarre_evaluation) |
 
