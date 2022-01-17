@@ -83,7 +83,7 @@ training board accuracy on validation set
          + 2º group : volumes LL 106b-126 (82 images) 
          = 193 images (TRAIN)
 
-         + 22 images (TEST) : LL 109A, 111, 115, 116, 121, 123-124
+         + 22 images (semi-external TEST) : LL 109A, 111, 115, 116, 121, 123-124 (volumes not used on training)
 
 Total : 
 - TRAIN: 550 images --> 450 folios -> 900 pages
