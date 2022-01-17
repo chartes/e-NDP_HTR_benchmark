@@ -90,8 +90,8 @@ Total :
 - TEST: 22 images --> 22 pages
 
 ### External test dataset
-- Bnf Latin 1770 (687 images): https://gallica.bnf.fr/ark:/12148/btv1b525092040
-- Cartulary of Charles II of Navarre (Navarre_Pau_AD_E513, 209 images) : http://earchives.le64.fr/archives-en-ligne/ark:/81221/r13615z7dvnv8k/f1 / https://doi.org/10.5281/zenodo.5600884
+- Bnf Latin 17740 (1430-1444, 687 images): https://gallica.bnf.fr/ark:/12148/btv1b525092040
+- Cartulary of Charles II of Navarre (Navarre_Pau_AD_E513, 1297-1372, 209 images) : http://earchives.le64.fr/archives-en-ligne/ark:/81221/r13615z7dvnv8k/f1 / https://doi.org/10.5281/zenodo.5600884
 
 ## Multilingual 
 
