@@ -74,9 +74,9 @@ training board accuracy on validation set
 
 ## Training and testing data-sets 
 
-- F. Odart de Morchesne:  189 images (378 pages): https://gallica.bnf.fr/ark:/12148/btv1b9059518w.image  /  http://elec.enc.sorbonne.fr/morchesne/html/morchesne.html
-- cart. ND de Clairmarais :  134 images (268 pages) : https://bvmm.irht.cnrs.fr/mirador/index.php?manifest=https://bvmm.irht.cnrs.fr/iiif/32117/manifest  /  https://doi.org/10.5281/zenodo.5600884
-- Livre Rouge ( Châtelet de Paris. Y//3 ) :  34 images : https://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_056373/c-2xp1c58jd-1w19uv1g8sus6  /  https://gitlab.huma-num.fr/lamop/htr/-/tree/master/Livre_Rouge_Y__3
+- F. Odart de Morchesne:  189 images (1427, 378 pages): https://gallica.bnf.fr/ark:/12148/btv1b9059518w.image  /  http://elec.enc.sorbonne.fr/morchesne/html/morchesne.html
+- Cart. ND de Clairmarais :  134 images (1220 - 1460, 268 pages) : https://bvmm.irht.cnrs.fr/mirador/index.php?manifest=https://bvmm.irht.cnrs.fr/iiif/32117/manifest  /  https://doi.org/10.5281/zenodo.5600884
+- Livre Rouge ( Châtelet de Paris. Y//3 ) :  34 images (1223 - 1474) : https://www.siv.archives-nationales.culture.gouv.fr/siv/UD/FRAN_IR_056373/c-2xp1c58jd-1w19uv1g8sus6  /  https://gitlab.huma-num.fr/lamop/htr/-/tree/master/Livre_Rouge_Y__3
 - e-NDP: LL 108a (27 images) + LL 125 (20) : https://e-ndp-beta.lamop.fr/public/E-NdP/temp/JPEG/
          
          + 1º group : volumes LL 106b-126 (64 images)
@@ -90,12 +90,12 @@ Total :
 - TEST: 22 images --> 22 pages
 
 ### External test dataset
-- Bnf Latin 17740 (1430-1444, 687 images): https://gallica.bnf.fr/ark:/12148/btv1b525092040
-- Cartulary of Charles II of Navarre (Navarre_Pau_AD_E513, 1297-1372, 209 images) : http://earchives.le64.fr/archives-en-ligne/ark:/81221/r13615z7dvnv8k/f1 / https://doi.org/10.5281/zenodo.5600884
+- Bnf Latin 17740 (1430 - 1444, 687 images): https://gallica.bnf.fr/ark:/12148/btv1b525092040
+- Cartulary of Charles II of Navarre (Navarre_Pau_AD_E513, 1297 - 1372, 209 images) : http://earchives.le64.fr/archives-en-ligne/ark:/81221/r13615z7dvnv8k/f1 / https://doi.org/10.5281/zenodo.5600884
 
 ## Multilingual 
 
-- Odart de Morchesne : 274 actes --> 94 lat + 180 fro (35%-40% lat)
+- Odart de Morchesne : 274 formules --> 94 lat + 180 fro (35%-40% lat)
 - Clairmarais : 178 actes ---> 176 lat + 2 fro (99% lat)
 - Livre Rouge (35% - 40% latin)
 - e-ndp (almost all in latin)
