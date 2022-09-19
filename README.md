@@ -52,7 +52,7 @@ references:
 
 ![alt text for screen readers](https://gitlab.com/magistermilitum/home_alcar_kraken/-/raw/main/images/kraken_arch_1.drawio.png)
 
-hyper_params': {'pad': 16, 'freq': 1.0, 'batch_size': 1, 'lag': 5, 'min_delta': None, 'optimizer': 'Adam', 'lrate': 0.0002, 'momentum': 0.9, 'weight_decay': 0, 'schedule': 'reduceonplateau', 'normalization': None, 'normalize_whitespace': True, 'augment': False, 'step_size': 10, 'gamma': 0.1, 'rop_patience': 3, 'cos_t_max': 50}}
+hyper_params': {'pad': 24, 'freq': 1.0, 'batch_size': 1, 'lag': 5, 'min_delta': None, 'optimizer': 'Adam', 'lrate': 0.0002, 'momentum': 0.9, 'weight_decay': 0, 'schedule': 'reduceonplateau', 'normalization': None, 'normalize_whitespace': True, 'augment': False, 'step_size': 10, 'gamma': 0.1, 'rop_patience': 3, 'cos_t_max': 50}}
 
 ### Architecure 2:
 
@@ -114,8 +114,8 @@ Training HTR versions using varied data:
 - 11/01/2022: V3 core --> V1 core + V2 core + 82 pages (2º e-ndp transcription group)
 - 10/02/2022: V4 core --> V1 core + V2 core + V3 core + 76 pages (3º e-ndp transcription group)
 - 30/06/2022: V5 core ---> all V4 core + 78 pages (4º e-ndp transcription group)
-- 17/07/2022: V6 core ---> all V5 core + 40 pages (40 pages coming for new digitized volumes: 105, 106A, 111, 107, 118, 119, 120, 123-124, 127-128)
-- 16/08/2022: V7 core ---> all V6 core + 40 pages (42 pages coming for new digitized volumes: 105, 106A, 111, 107, 118, 119, 120, 123-124, 127-128)
+- 17/07/2022: V6 core ---> all V5 core + 40 pages coming for new digitized volumes: 105, 106A, 111, 107, 118, 119, 120, 123-124, 127-128)
+- 16/08/2022: V7 core ---> all V6 core + 42 pages coming for new digitized volumes: 105, 106A, 111, 107, 118, 119, 120, 123-124, 127-128)
 
 
 - **val_acc** = accuracy on validation set _during_ training
