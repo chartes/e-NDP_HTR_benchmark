@@ -81,14 +81,16 @@ training board accuracy on validation set
          
          + 1º group : volumes LL 106b-126 (64 images)
          + 2º group : volumes LL 106b-126 (82 images) 
-         + 3º group : volumes LL 106b-126 (78 images) 
-         = 271 images (TRAIN)
+         + 3º group : volumes LL 106b-126 (76 images) 
+         + 4º group : volumes LL 106b-126 (78 images) 
+         + 5º group : volumes LL 105, 106A, 111, 107, 118, 119, 120, 123-124, 127-128 (82 pages)
+         = 429 images (TRAIN)
 
-         + 22 images (semi-external TEST) : LL 109A, 111, 115, 116, 121, 123-124 (volumes not used in training)
+         + 28 images (semi-external TEST) : LL 109A, 111, 115, 116, 121, 123-124 (volumes not used in training)
 
 Total : 
-- TRAIN: 628 images --> 489 folios -> 978 pages
-- TEST: 22 images --> 22 pages
+- TRAIN: 786 images --> 554 folios -> 1109 pages
+- TEST: 28 images --> 28 pages
 
 ### External test dataset
 - Bnf Latin 17740 (1430 - 1444, 687 images): https://gallica.bnf.fr/ark:/12148/btv1b525092040
@@ -100,7 +102,7 @@ Total :
 - Clairmarais : 178 actes ---> 176 lat + 2 fro (99% lat)
 - Livre Rouge (35% - 40% latin)
 - e-ndp (almost all in latin)
-- Total: ± 72% latin / 28% french
+- Total: ± 77% latin / 23% french
 
 
 ## Model versions
@@ -111,6 +113,9 @@ Training HTR versions using varied data:
 - 16/11/2021: V2 core --> V1 core + 84 pages (1º e-ndp transcription group)
 - 11/01/2022: V3 core --> V1 core + V2 core + 82 pages (2º e-ndp transcription group)
 - 10/02/2022: V4 core --> V1 core + V2 core + V3 core + 76 pages (3º e-ndp transcription group)
+- 30/06/2022: V5 core ---> all V4 core + 78 pages (4º e-ndp transcription group)
+- 17/07/2022: V6 core ---> all V5 core + 40 pages (40 pages coming for new digitized volumes: 105, 106A, 111, 107, 118, 119, 120, 123-124, 127-128)
+- 16/08/2022: V7 core ---> all V6 core + 40 pages (42 pages coming for new digitized volumes: 105, 106A, 111, 107, 118, 119, 120, 123-124, 127-128)
 
 
 - **val_acc** = accuracy on validation set _during_ training
@@ -125,6 +130,7 @@ Training HTR versions using varied data:
 | V3_test | V1 core, V2 core, +2º e-ndp group |arch_1 |93.90% |86.92% |13.25% |36.24% | [log_3](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3_evaluation) |
 | V3b_test | Only e-ndp transcriptions (193 images) |arch_1| 91.19% |81.90% |18.44% |46.94% |[log_4](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3b_evaluation) |
 | V4_test | V1 core, V2 core, V3 core +3º e-ndp group |arch_1 |93.52% |88.55% |11.43% |32.47% | [log_5](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V4_evaluation) |
+| V5_test | V1, V2, V4 cores + 4º e-ndp group |arch_1 |94.48% |90.31% |9.73% |27.61% | [log_5](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V5_evaluation) |
 ||[all G1 test metrics](https://magistermilitum.gitlab.io/e-ndp_htr/)|
 | V3_Latin_17740 | V3 tested on Latin 17740 manuscrit |arch_1| - |89.25% |11.21% |30.28% |[log_6](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_latin_17740_evaluation) |
 | V3b_Latin_17740 | V3b tested on Latin 17740 manuscrit |arch_1| - |82.59% |18.78% |48.17% |[log_7](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_latin_17740_evaluation) |
