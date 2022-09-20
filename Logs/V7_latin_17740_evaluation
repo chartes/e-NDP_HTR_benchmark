@@ -1,6 +1,4 @@
 Loading model /home/storres/Téléchargements/model_70.mlmodel	✓
-[7.1613] Region eSc_dummyblock_ without coordinates 
-[7.4078] Region eSc_dummyblock_ without coordinates 
 Evaluating /home/storres/Téléchargements/model_70.mlmodel
 Evaluating  [####################################]  100%          
 === report  ===
