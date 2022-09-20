@@ -99,7 +99,7 @@ Total :
 ## Multilingual 
 
 - Odart de Morchesne : 274 formules --> 94 lat + 180 fro (35%-40% lat)
-- Clairmarais : 178 actes ---> 176 lat + 2 fro (99% lat)
+- Clairmarais : 178 actes ---> 168 lat + 10 fro (92% lat)
 - Livre Rouge (35% - 40% latin)
 - e-ndp (almost all in latin)
 - Total: ± 77% latin / 23% french
@@ -136,3 +136,4 @@ Training HTR versions using varied data:
 | V3b_Latin_17740 | V3b tested on Latin 17740 manuscrit |arch_1| - |82.59% |18.78% |48.17% |[log_8](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_latin_17740_evaluation) |
 | V3_Navarre | V3 tested on Charles II of Navarre manuscrit |arch_1| - |82.82% |14.36% |44.42% |[log_9](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_Navarre_evaluation) |
 | V3b_Navarre | V3b tested on Charles II of Navarre manuscrit |arch_1| - |67.81% |29.02% |69.80% |[log_10](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_Navarre_evaluation) |
+| V7_Latin_17740 | V7 tested on Latin 17740 manuscrit |arch_1| - |91.52% |9.27% |28.28% |[log_11](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_latin_17740_evaluation) |
