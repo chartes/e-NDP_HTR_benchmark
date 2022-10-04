@@ -5,7 +5,8 @@ PATH endp
 ENCODING "UTF-8"
 LANGUAGE "Latin"
 SUBCDEF   '/corpora/endp/subcorpora/subcorps'
-SUBCORPATTRS "doc.volume|doc.folio|doc.date|*doc.sujet"
+SUBCORPATTRS "doc.volume|doc.folio|doc.date|doc.sujet"
+SHORTREF "=doc.id" 
 
 PATH   '/corpora/endp/indexed/'
 VERTICAL  '/corpora/endp/vertical/source'
@@ -14,7 +15,7 @@ VERTICAL  '/corpora/endp/vertical/source'
 IINFOHREF "XXX"
 TAGSETDOC "https://glossaria.eu/lemmatisation/#page-content"
 
-FULLREF "doc.volume,doc.folio,doc.date,doc.sujet"
+FULLREF "doc.volume,doc.folio,doc.date,doc.sujet,doc.link,doc.id"
 
 ATTRIBUTE   word
 ATTRIBUTE   tag
@@ -55,9 +56,15 @@ STRUCTURE   doc {
       MULTISEP ","
       HIERARCHICAL "::"
    }
+   ATTRIBUTE link {
+		URLTEMPLATE "%s"
+		MEDIATYPE "image"
+   }
    ATTRIBUTE volume
    ATTRIBUTE folio
+   ATTRIBUTE id
 }
+
 
 
 STRUCTURE s {
