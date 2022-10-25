@@ -56,9 +56,9 @@ hyper_params': {'pad': 24, 'freq': 1.0, 'batch_size': 1, 'lag': 5, 'min_delta': 
 
 > Trained on Kraken (https://github.com/mittagessen/kraken). Training command: 
 > 
-> kraken V3 : ketos train -N 70 -q dumb -f page --threads 32 -r 0.0001 --schedule reduceonplateau --sched-patience 3 -d cuda:0 --preload --pad 24 -s '[1,128,0,1 Cr4,16,32 Do0.1,2 Mp2,2 Cr4,16,32 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 S1(1x0)1,3 Lbx256 Do0.3,2 Lbx256 Do0.3,2 Lbx256 Do0.3]' --augment training_folder/*.xml
+> kraken 3.0 : ketos train -N 70 -q dumb -f page --threads 32 -r 0.0001 --schedule reduceonplateau --sched-patience 3 -d cuda:0 --preload --pad 24 -s '[1,128,0,1 Cr4,16,32 Do0.1,2 Mp2,2 Cr4,16,32 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 S1(1x0)1,3 Lbx256 Do0.3,2 Lbx256 Do0.3,2 Lbx256 Do0.3]' --augment training_folder/*.xml
 >
-> kraken V4 : ketos train -N 70 -q dumb -f page --workers 32 -r 0.0001 --schedule reduceonplateau --sched-patience 3 -d cuda:0 --pad 24 -s '[1,128,0,1 Cr4,16,32 Do0.1,2 Mp2,2 Cr4,16,32 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 S1(1x0)1,3 Lbx256 Do0.3,2 Lbx256 Do0.3,2 Lbx256 Do0.3]' --augment  training_folder/*.xml
+> kraken 4.0 : ketos train -N 70 -q dumb -f page --workers 32 -r 0.0001 --schedule reduceonplateau --sched-patience 3 -d cuda:0 --pad 24 -s '[1,128,0,1 Cr4,16,32 Do0.1,2 Mp2,2 Cr4,16,32 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 S1(1x0)1,3 Lbx256 Do0.3,2 Lbx256 Do0.3,2 Lbx256 Do0.3]' --augment  training_folder/*.xml
 
 
 ### Architecure 2:
