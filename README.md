@@ -1,11 +1,11 @@
-# e-NDP_HTR
+# Section 1 : Handwritten text recognition for e-NDP
 
 
 
 e-NDP_HTR training experiments to fit transcribed pages from AN, LL105-126 registers into Kraken HTR core.
 
 
-# Definitions
+## Definitions
 
 Stats for each register volume (LL105 - LL126, 26 volumes)
 
@@ -50,14 +50,20 @@ references:
 ### Architecure 1: 
 
 
-![alt text for screen readers](https://gitlab.com/magistermilitum/home_alcar_kraken/-/raw/main/images/kraken_arch_1.drawio.png)
+![kraken architecture 1](https://gitlab.com/magistermilitum/home_alcar_kraken/-/raw/main/images/kraken_arch_1.drawio.png)
 
 hyper_params': {'pad': 24, 'freq': 1.0, 'batch_size': 1, 'lag': 5, 'min_delta': None, 'optimizer': 'Adam', 'lrate': 0.0002, 'momentum': 0.9, 'weight_decay': 0, 'schedule': 'reduceonplateau', 'normalization': None, 'normalize_whitespace': True, 'augment': False, 'step_size': 10, 'gamma': 0.1, 'rop_patience': 3, 'cos_t_max': 50}}
+
+> Trained on Kraken (https://github.com/mittagessen/kraken). Training command: 
+> 
+> kraken V3 : ketos train -N 70 -q dumb -f page --threads 32 -r 0.0001 --schedule reduceonplateau --sched-patience 3 -d cuda:0 --preload --pad 24 -s '[1,128,0,1 Cr4,16,32 Do0.1,2 Mp2,2 Cr4,16,32 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 S1(1x0)1,3 Lbx256 Do0.3,2 Lbx256 Do0.3,2 Lbx256 Do0.3]' --augment training_folder/*.xml
+>
+> kraken V4 : ketos train -N 70 -q dumb -f page --workers 32 -r 0.0001 --schedule reduceonplateau --sched-patience 3 -d cuda:0 --pad 24 -s '[1,128,0,1 Cr4,16,32 Do0.1,2 Mp2,2 Cr4,16,32 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 Mp2,2 Cr3,8,64 Do0.1,2 S1(1x0)1,3 Lbx256 Do0.3,2 Lbx256 Do0.3,2 Lbx256 Do0.3]' --augment  training_folder/*.xml
+
 
 ### Architecure 2:
 
 # Training
-
 
 
 training board accuracy on validation set
@@ -70,7 +76,7 @@ training board accuracy on validation set
 
 
 
-# Experiments
+# HTR Experiments
 
 ## Training and testing data-sets 
 
@@ -138,3 +144,30 @@ Training HTR versions using varied data:
 | V3_Navarre | V3 tested on Charles II of Navarre manuscrit |arch_1| - |82.82% |14.36% |44.42% |[log_10](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_Navarre_evaluation) |
 | V3b_Navarre | V3b tested on Charles II of Navarre manuscrit |arch_1| - |67.81% |29.02% |69.80% |[log_11](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_Navarre_evaluation) |
 | V7_Navarre | V7 tested on Charles II of Navarre manuscrit |arch_1| - |85.42% |12.52% |37.78% |[log_12](https://github.com/chartes/e-NDP_HTR/raw/main/Logs/V7_Navarre_evaluation) |
+
+
+
+# Section 2: Layout Segmentation
+
+Layout segmentation is a compulsory step before HTR recognition in order to distinguish sections inside a document. This process intend to separate interdependant page zones to produce a recognition in a section-sequence order and not in a line-sequence order which mix textual and peri-textual content.
+
+For e-NDP we contemplate 5 sections to englobe the page distribution in all the 26 volumes: 
+1. **Block** : All the central text blocks, that normally corresponds to the main content called "conclusions" in registers.
+2. **Liste** : List of names of the canons who were present during the meeting. Normally located before the "conclusions".
+3. **Entrée** : Marginal notes or entries to inform about the content of "conclusions".
+4. **Date** : Paragraph contending the date. Normally at the head of a "conclusion", but separate of the main body.
+5. **Numérotation** : Page numbers in roman or arabic. Usually appear in the corners of the pages.
+
+
+<img align="center" src="https://gitlab.com/magistermilitum/e-NDP/-/raw/main/images/automatic_sections.jpg" width="600" height="455" />
+<p align="center">Automatic layout segmentation in a e-NDP page. </p>
+
+## Layout segmentation experiments
+
+We annotate 376 transcribed pages from the e-NDP ground-truth (V1 core to V6 core) and we experiment using a classical CNN+BiLSTM architecture.
+
+Order to replicate the training in Kraken 3: 
+> ketos segtrain -f page -o seg_model -d cuda:0 -bl --threads 32 --epochs 50 --schedule reduceonplateau -s '[1,1200,0,3 Cr7,7,64,2,2 Gn32 Cr3,3,128,2,2 Gn32 Cr3,3,128 Gn32 Cr3,3,256 Gn32 Cr3,3,256 Gn32 Lbx32 Lby32 Cr1,1,32 Gn32 Lby32 Lbx32]' training_folder/*xml
+
+Another training option is the fine-tuning on the default blla.mlmodel (https://github.com/mittagessen/kraken/blob/master/kraken/blla.mlmodel):
+> ketos segtrain -i blla.mlmodel -f page -o seg_model -d cuda:0 -bl --threads 32  --resize add --epochs 50 --schedule reduceonplateau -s '[1,1200,0,3 Cr7,7,64,2,2 Gn32 Cr3,3,128,2,2 Gn32 Cr3,3,128 Gn32 Cr3,3,256 Gn32 Cr3,3,256 Gn32 Lbx32 Lby32 Cr1,1,32 Gn32 Lby32 Lbx32]' training_folder/*xml
