@@ -171,3 +171,17 @@ Order to replicate the training in Kraken 3:
 
 Another training option is the fine-tuning on the default blla.mlmodel (https://github.com/mittagessen/kraken/blob/master/kraken/blla.mlmodel):
 > ketos segtrain -i blla.mlmodel -f page -o seg_model -d cuda:0 -bl --threads 32  --resize add --epochs 50 --schedule reduceonplateau -s '[1,1200,0,3 Cr7,7,64,2,2 Gn32 Cr3,3,128,2,2 Gn32 Cr3,3,128 Gn32 Cr3,3,256 Gn32 Cr3,3,256 Gn32 Lbx32 Lby32 Cr1,1,32 Gn32 Lby32 Lbx32]' training_folder/*xml
+
+## Layout segmentation model versions
+
+
+- **mean_iu** = Mean intersection over union (IU)
+- **freq_iu** = Frequency intersection over union (IU)
+- **mean_acc** = Mean accuracy (average of the prediction accuracy over all categories)
+- **IU** is the overlap ratio between the candidate bound and the ground truth bound.
+
+| model_name | Content | mean_iu | freq_iu |mean_acc |
+| ------ | ------ |------ |------ |------ |
+| V1_layout | endp V1-V2 cores | 0.6508| 0.7918 |0.9552 |
+| V2_layout | endp V1-V4 cores  | 0.6744 | 0.8366 |0.9648 |
+| V3_layout | endp V1-V6 cores  | 0.6936 | 0.8455 |0.9673 |
