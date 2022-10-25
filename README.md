@@ -43,6 +43,7 @@ references:
 [Projet e-NDP – Notre-Dame de Paris et son cloître : archives des séances du séminaire](https://lamop.hypotheses.org/files/2020/11/e-NDP_seance1_20201020-compresse-1.pdf)
 
 
+
 [SÉRIE LL MONUMENTS ECCLÉSIASTIQUES REGISTRES](http://www.archivesnationales.culture.gouv.fr/chan/chan/fonds/EGF/SA/InvSAPDF/Ll.pdf)
 
 # Architecture
@@ -185,3 +186,7 @@ Another training option is the fine-tuning on the default blla.mlmodel (https://
 | V1_layout | endp V1-V2 cores | 0.6508| 0.7918 |0.9552 |
 | V2_layout | endp V1-V4 cores  | 0.6744 | 0.8366 |0.9648 |
 | V3_layout | endp V1-V6 cores  | 0.6936 | 0.8455 |0.9673 |
+
+
+references:
+[Long, J., Shelhamer, E., & Darrell, T. (2015). Fully convolutional networks for semantic segmentation. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 3431-3440).](https://openaccess.thecvf.com/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf)
