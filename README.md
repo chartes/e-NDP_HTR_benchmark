@@ -137,7 +137,7 @@ Training HTR versions using varied data:
 | V3_test | V1 core, V2 core, +2º e-ndp group |arch_1 |93.90% |86.92% |13.25% |36.24% | [log_3](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3_evaluation) |
 | V3b_test | Only e-ndp transcriptions (193 images) |arch_1| 91.19% |81.90% |18.44% |46.94% |[log_4](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V3b_evaluation) |
 | V4_test | V1 core, V2 core, V3 core +3º e-ndp group |arch_1 |93.52% |88.55% |11.43% |32.47% | [log_5](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/endp_V4_evaluation) |
-| V5_test | V1, V2, V4 cores + 4º e-ndp group |arch_1 |94.48% |90.31% |9.73% |27.61% | [log_6](https://gitlab.com/magistermilitum/e-ndp_htr/-/blob/main/Logs/endp_V4_2_evaluation) |
+| V5_test | V1, V2, V4 cores + 4º e-ndp group |arch_1 |94.48% |90.31% |9.73% |27.61% | [log_6](https://github.com/chartes/e-NDP_HTR/raw/main/Logs/endp_V5_evaluation) |
 ||[all G1 test metrics](https://magistermilitum.gitlab.io/e-ndp_htr/)|
 | V3_Latin_17740 | V3 tested on Latin 17740 manuscrit |arch_1| - |89.25% |11.21% |30.28% |[log_7](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3_latin_17740_evaluation) |
 | V3b_Latin_17740 | V3b tested on Latin 17740 manuscrit |arch_1| - |82.59% |18.78% |48.17% |[log_8](https://gitlab.com/magistermilitum/e-ndp_htr/-/raw/main/Logs/V3b_latin_17740_evaluation) |
